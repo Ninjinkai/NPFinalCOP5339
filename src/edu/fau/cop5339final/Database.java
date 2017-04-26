@@ -1,5 +1,7 @@
 package edu.fau.cop5339final;
 
-public class Database {
+public interface Database {
+	
+	public void writeData(String dataToWrite);
 
 }
