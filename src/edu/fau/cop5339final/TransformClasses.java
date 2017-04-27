@@ -5,6 +5,7 @@ public class TransformClasses {
 	public static void main(String[] args) {
 		
 		Container container = new Container("123ABC", 33.2, 3050);
+		container.writeData(container.containerID);
 
 	}
 
