@@ -9,10 +9,8 @@ public class DatabaseAdapter implements Adapter {
 	}
 	
 	@Override
-	public void writeData(String dataToWrite) {
-		
-		database.writeData(dataToWrite);
-		
+	public void writeData(String table, String dataToWrite) {
+		database.databaseQuery(table, dataToWrite);
 	}
 
 }

@@ -5,6 +5,8 @@ public class Container {
 	public String containerID;
 	public double volumeInCubicMeters;
 	public double weightInKGs;
+	public String assignedWarehouse;
+	public int warehouseLocationNumber;
 	
 	public DatabaseAdapter database = new DatabaseAdapter(new Database());
 	
@@ -13,9 +15,16 @@ public class Container {
 		this.volumeInCubicMeters = volumeInCubicMeters;
 		this.weightInKGs = weightInKGs;
 	}
-	
-	public void writeData(String dataToWrite) {
-		this.database.writeData(dataToWrite);
+
+	public void writeToDatabase() {
+		this.database.writeData("CARGO_UNIT",
+				"containerID (primary key): " + containerID + "\n" +
+				"volumeInCubicMeters: " + String.valueOf(volumeInCubicMeters) + "\n" +
+				"weightInKGs: " + String.valueOf(weightInKGs) + "\n" +
+				"assignedWarehouse: " + assignedWarehouse + "\n" +
+				"warehouseLocationNumber: " + String.valueOf(warehouseLocationNumber)
+				);
+		
 	}
 
 }
