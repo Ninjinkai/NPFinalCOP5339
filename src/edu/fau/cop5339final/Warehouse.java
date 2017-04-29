@@ -29,7 +29,5 @@ public class Warehouse {
 		return false;
 		
 	}
-	
-	
 
 }
